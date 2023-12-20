@@ -1,62 +1,66 @@
 import React from "react";
+import "./custom-nav.css";
+//import picture from "./picture.jpg";
 
 const HomeComponent = () => {
-    return (
-        <main>
-          <div className="container py-4">
-            <div className="p-5 mb-4 bg-light rounded-3">
-              <div className="container-fluid py-5">
-                <h1 className="display-5 fw-bold">Learning System</h1>
-                <p className="col-md-8 fs-4">
-                  This system is using React.js as front-end framework, and Node.js,
-                  MongoDB as backend server. This kind of project is called MERN
-                  project, which is one of the most popular way to create modern
-                  websites.
-                </p>
-                <button className="btn btn-primary btn-lg" type="button">
-                  See how it works.
-                </button>
-                <button className="btn btn-secondary btn-lg" type="button">
-                  Another choice.
-                </button>
-              </div>
+    return (     
+            <main> 
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-    
-            <div className="row align-items-md-stretch">
-              <div className="col-md-6">
-                <div className="h-100 p-5 text-white bg-dark rounded-3">
-                  <h2>As a student</h2>
-                  <p>
-                    Students can register in courses they like. This website is for
-                    practice purpose only, so please do not provide any personal
-                    information, such as credit card numbers.
-                  </p>
-                  <button className="btn btn-outline-light" type="button">
-                    Login or Register Now
-                  </button>
+            <div class="carousel-inner mb-3 ">
+                <div class="carousel-item active  ">
+                <img src="http://picsum.photos/200/100?random=10" class="d-block mx-auto pic-set" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 className="fs-4">2023會場照片</h5>
+                    <p className="fs-5">展示我們的工控產品.</p>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="h-100 p-5 bg-light border rounded-3">
-                  <h2>As an Instructor</h2>
-                  <p>
-                    You can become an instructor by registering as one, and start
-                    making online courses. This website is for practice purpose
-                    only, so please do not provide any personal information, such as
-                    credit card numbers.
-                  </p>
-                  <button class="btn btn-outline-secondary" type="button">
-                    Login or Register Now
-                  </button>
                 </div>
-              </div>
+                <div class="carousel-item ">
+                <img src="http://picsum.photos/200/100?random=10" class="d-block mx-auto pic-set" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 className="fs-4">2024會場照片</h5>
+                    <p className="fs-5">美國矽谷展示我們的AI產品.</p>
+                </div>
+                </div>
+                <div class="carousel-item ">
+                <img src="http://picsum.photos/200/100?random=10" class="d-block mx-auto pic-set" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 className="fs-4">公司照片</h5>
+                    <p className="fs-5">合作伙伴大約10位.</p>
+                </div>
+                </div>
             </div>
-    
-            <footer className="pt-3 mt-4 text-muted border-top">
-              &copy; 2021 Wilson Ren
-            </footer>
-          </div>
-        </main>
-      );
-    };
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+                {/*
+                <div className="container">
+                    <div class="card bg-dark text-white card-jason" >
+                    <img src={picture} class="card-img card-img-jason" ></img>
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text fs-1 "> Server Computer Experts.</p>
+                            </div>
+                        </div> 
+                    </div>     
+                        */}       
+                <div className="container-sm footer" >
+                    <h4>
+                        杰昇科技Copyright © 2023 Jason Technology Corp All rights reserved
+                    </h4>
+                </div>            
+            </main>       
+    );
+};
 export default HomeComponent;
+    

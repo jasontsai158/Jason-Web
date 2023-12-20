@@ -1,23 +1,32 @@
 import React, { useState } from "react";
-import { Switch, Route } from "react-router-dom";
-//import { Routes, Route} from "react-router-dom";為 React v6.0的寫法
+import { Routes, Route} from "react-router-dom";
 import HomeComponent from "./components/home-components";
 import NavComponent from "./components/nav-component";
 import RegisterComponent from "./components/register-component";
 import LoginComponent from "./components/login-component";
+import ContactComponents from "./components/contact-component";
 import ProfileComponent from "./components/profile-component";
+import ProductComponents from "./components/product-components";
+import AboutComponents from "./components/about-components";
 import AuthService from "./services/auth.service";
-import CourseComponent from "./components/course-component";
-import PostCourseComponent from "./components/postcourse-Component";
-import EnrollComponent from "./components/enroll-component";
-
 // React 5.6.1的寫法,(與老師的一樣)
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
 
   return (
-    <div>
-      <NavComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />
+
+    <div className="App">
+    <NavComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />
+    <Routes>
+      <Route path="/" element={ <HomeComponent /> } />
+      <Route path="register" element={<RegisterComponent />} />
+      <Route path="Product" element={<ProductComponents />} />
+      <Route path="contact" element={<ContactComponents />} />
+      <Route path="login" element={<LoginComponent/>} />
+      <Route path="Profile" element={<ProfileComponent/>} />
+      <Route path="about" element={<AboutComponents/>} />
+      </Routes>
+      {/*
       <Switch>
         <Route path="/" exact>
           <HomeComponent />
@@ -41,6 +50,7 @@ function App() {
           <EnrollComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />
         </Route>
       </Switch>
+  */}
     </div>
   );
 }
