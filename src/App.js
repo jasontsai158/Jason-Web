@@ -9,7 +9,7 @@ import ProfileComponent from "./components/profile-component";
 import ProductComponents from "./components/product-components";
 import AboutComponents from "./components/about-components";
 import AuthService from "./services/auth.service";
-// React 5.6.1的寫法,(與老師的一樣)
+// React 5.6.1的寫法,(與老師的一樣)----->1234567890
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
 
