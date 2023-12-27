@@ -22,8 +22,8 @@ function App() {
       <Route path="register" element={<RegisterComponent />} />
       <Route path="Product" element={<ProductComponents />} />
       <Route path="contact" element={<ContactComponents />} />
-      <Route path="login" element={<LoginComponent/>} />
-      <Route path="Profile" element={<ProfileComponent/>} />
+      <Route path="login" element={<LoginComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
+      <Route path="Profile" element={<ProfileComponent currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
       <Route path="about" element={<AboutComponents/>} />
       </Routes>
       {/*
